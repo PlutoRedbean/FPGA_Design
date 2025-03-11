@@ -1,0 +1,593 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Oct 17 15:29:01 2024
+# Process ID: 5844
+# Current directory: E:/Example/XExample/EX18_ADC/EX18_ADC.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: E:/Example/XExample/EX18_ADC/EX18_ADC.runs/synth_1/top.vds
+# Journal file: E:/Example/XExample/EX18_ADC/EX18_ADC.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7s6ftgb196-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s6'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s6'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4924 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 431.066 ; gain = 98.953
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [E:/Example/XExample/EX18_ADC/top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'adc' [E:/Example/XExample/EX18_ADC/adc.v:1]
+	Parameter IDLE bound to: 6'b000001 
+	Parameter WR_REQ bound to: 6'b000010 
+	Parameter WR_WAIT bound to: 6'b000100 
+	Parameter RD_REQ bound to: 6'b001000 
+	Parameter RD_WAIT bound to: 6'b010000 
+	Parameter DONE bound to: 6'b100000 
+INFO: [Synth 8-6157] synthesizing module 'i2c' [E:/Example/XExample/EX18_ADC/i2c.v:1]
+	Parameter IDLE bound to: 7'b0000001 
+	Parameter START bound to: 7'b0000010 
+	Parameter WR_DATA bound to: 7'b0000100 
+	Parameter RD_DATA bound to: 7'b0001000 
+	Parameter R_ACK bound to: 7'b0010000 
+	Parameter T_ACK bound to: 7'b0100000 
+	Parameter STOP bound to: 7'b1000000 
+	Parameter T bound to: 100000 - type: integer 
+	Parameter SCL_MAX bound to: 500 - type: integer 
+	Parameter SCL_LOW_HALF bound to: 124 - type: integer 
+	Parameter SCL_HIGH_HALF bound to: 374 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'i2c' (1#1) [E:/Example/XExample/EX18_ADC/i2c.v:1]
+WARNING: [Synth 8-350] instance 'inst_i2c' of module 'i2c' requires 11 connections, but only 10 given [E:/Example/XExample/EX18_ADC/adc.v:257]
+WARNING: [Synth 8-5788] Register op_rd_data_reg in module adc is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Example/XExample/EX18_ADC/adc.v:212]
+WARNING: [Synth 8-5788] Register adc_mdata_r_reg in module adc is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Example/XExample/EX18_ADC/adc.v:62]
+WARNING: [Synth 8-5788] Register adc_ldata_r_reg in module adc is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Example/XExample/EX18_ADC/adc.v:62]
+WARNING: [Synth 8-3848] Net ready in module/entity adc does not have driver. [E:/Example/XExample/EX18_ADC/adc.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'adc' (2#1) [E:/Example/XExample/EX18_ADC/adc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'segdisplay' [E:/Example/XExample/EX18_ADC/seg.v:1]
+	Parameter CNT_WAIT_MAX bound to: 25'b0000000001100001101001111 
+	Parameter SEG_0 bound to: 8'b11000000 
+	Parameter SEG_1 bound to: 8'b11111001 
+	Parameter SEG_2 bound to: 8'b10100100 
+	Parameter SEG_3 bound to: 8'b10110000 
+	Parameter SEG_4 bound to: 8'b10011001 
+	Parameter SEG_5 bound to: 8'b10010010 
+	Parameter SEG_6 bound to: 8'b10000010 
+	Parameter SEG_7 bound to: 8'b11111000 
+	Parameter SEG_8 bound to: 8'b10000000 
+	Parameter SEG_9 bound to: 8'b10010000 
+	Parameter SEG_A bound to: 8'b10001000 
+	Parameter SEG_B bound to: 8'b10000011 
+	Parameter SEG_C bound to: 8'b11000110 
+	Parameter SEG_D bound to: 8'b10100001 
+	Parameter SEG_E bound to: 8'b10000110 
+	Parameter SEG_F bound to: 8'b10001110 
+	Parameter SEG_X bound to: 8'b10111111 
+	Parameter IDLE bound to: 8'b11111111 
+	Parameter SEG_C7 bound to: 8'b00000001 
+	Parameter SEG_C6 bound to: 8'b00000010 
+	Parameter SEG_C5 bound to: 8'b00000100 
+	Parameter SEG_C4 bound to: 8'b00001000 
+	Parameter SEG_C3 bound to: 8'b00010000 
+	Parameter SEG_C2 bound to: 8'b00100000 
+	Parameter SEG_C1 bound to: 8'b01000000 
+	Parameter SEG_C0 bound to: 8'b10000000 
+INFO: [Synth 8-226] default block is never used [E:/Example/XExample/EX18_ADC/seg.v:78]
+INFO: [Synth 8-226] default block is never used [E:/Example/XExample/EX18_ADC/seg.v:141]
+WARNING: [Synth 8-5788] Register cnt_reg in module segdisplay is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Example/XExample/EX18_ADC/seg.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'segdisplay' (3#1) [E:/Example/XExample/EX18_ADC/seg.v:1]
+WARNING: [Synth 8-5788] Register bcd_reg in module top is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Example/XExample/EX18_ADC/top.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'top' (4#1) [E:/Example/XExample/EX18_ADC/top.v:1]
+WARNING: [Synth 8-3331] design adc has unconnected port ready
+WARNING: [Synth 8-3331] design adc has unconnected port wr_data[7]
+WARNING: [Synth 8-3331] design adc has unconnected port wr_data[6]
+WARNING: [Synth 8-3331] design adc has unconnected port wr_data[5]
+WARNING: [Synth 8-3331] design adc has unconnected port wr_data[4]
+WARNING: [Synth 8-3331] design adc has unconnected port wr_data[3]
+WARNING: [Synth 8-3331] design adc has unconnected port wr_data[2]
+WARNING: [Synth 8-3331] design adc has unconnected port wr_data[1]
+WARNING: [Synth 8-3331] design adc has unconnected port wr_data[0]
+WARNING: [Synth 8-3331] design adc has unconnected port wr_data_vld
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 487.109 ; gain = 154.996
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin adc_inst:wr_req to constant 0 [E:/Example/XExample/EX18_ADC/top.v:36]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 487.109 ; gain = 154.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 487.109 ; gain = 154.996
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7s6ftgb196-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Example/XExample/EX18_ADC/sm.xdc]
+Finished Parsing XDC File [E:/Example/XExample/EX18_ADC/sm.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Example/XExample/EX18_ADC/sm.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 783.910 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 783.910 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 783.910 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 783.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 783.910 ; gain = 451.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s6ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 783.910 ; gain = 451.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 783.910 ; gain = 451.797
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'cstate_reg' in module 'i2c'
+INFO: [Synth 8-5546] ROM "sda_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sda_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sda_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nstate" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "num" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'cstate_reg' in module 'adc'
+INFO: [Synth 8-5544] ROM "cmd_vld" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cmd" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "op_wr_data" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "nstate" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'c_status_reg' in module 'segdisplay'
+INFO: [Synth 8-5545] ROM "cnt_data" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "seg_a0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c_status" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                          0000001 |                          0000001
+                   START |                          0000010 |                          0000010
+                 WR_DATA |                          0000100 |                          0000100
+                   R_ACK |                          0010000 |                          0010000
+                 RD_DATA |                          0001000 |                          0001000
+                   T_ACK |                          0100000 |                          0100000
+                    STOP |                          1000000 |                          1000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'cstate_reg' in module 'i2c'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                           000001 |                           000001
+                  WR_REQ |                           000010 |                           000010
+                 WR_WAIT |                           000100 |                           000100
+                  RD_REQ |                           001000 |                           001000
+                 RD_WAIT |                           010000 |                           010000
+                    DONE |                           100000 |                           100000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'cstate_reg' in module 'adc'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+                 iSTATE0 |                              001 |                              001
+                 iSTATE1 |                              010 |                              010
+                 iSTATE2 |                              011 |                              011
+                 iSTATE3 |                              100 |                              100
+                 iSTATE4 |                              101 |                              101
+                 iSTATE5 |                              110 |                              110
+                 iSTATE6 |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'c_status_reg' using encoding 'sequential' in module 'segdisplay'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 783.910 ; gain = 451.797
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 10    
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 2     
+	   6 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 3     
+	   2 Input      6 Bit        Muxes := 5     
+	   7 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 8     
+	   8 Input      4 Bit        Muxes := 2     
+	   6 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 4     
+	   3 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   8 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+Module i2c 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 3     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	   8 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+Module adc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 6     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   6 Input      8 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 2     
+	   6 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      4 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 4     
+Module segdisplay 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 10 (col length:20)
+BRAMs: 10 (col length: RAMB18 20 RAMB36 10)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "adc_inst/inst_i2c/num" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "adc_inst/inst_i2c/sda_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "adc_inst/inst_i2c/sda_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "adc_inst/inst_i2c/sda_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "segdisplay_inst/cnt_data" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "segdisplay_inst/cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3886] merging instance 'adc_inst/rd_req_r_reg' (FDC) to 'adc_inst/device_id_r_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/wr_req_r_reg' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\adc_inst/num_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\adc_inst/num_reg[1] )
+INFO: [Synth 8-3886] merging instance 'adc_inst/device_id_r_reg[7]' (FDC) to 'adc_inst/device_id_r_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/addr_r_reg[7]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/device_id_w_reg[7]' (FDC) to 'adc_inst/device_id_r_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/device_id_r_reg[6]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/addr_r_reg[6]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/device_id_w_reg[6]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/device_id_r_reg[5]' (FDC) to 'adc_inst/device_id_r_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/addr_r_reg[5]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/device_id_w_reg[5]' (FDC) to 'adc_inst/device_id_r_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/device_id_r_reg[4]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/addr_r_reg[4]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/device_id_w_reg[4]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/device_id_r_reg[3]' (FDC) to 'adc_inst/device_id_r_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/addr_r_reg[3]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/device_id_w_reg[3]' (FDC) to 'adc_inst/device_id_r_reg[0]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/device_id_r_reg[2]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/addr_r_reg[2]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/device_id_w_reg[2]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/device_id_r_reg[1]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/addr_r_reg[1]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/device_id_w_reg[1]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/addr_r_reg[0]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/device_id_w_reg[0]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'bcd_reg[10]' (FDE) to 'bcd_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bcd_reg[11] )
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[28]' (FDP) to 'segdisplay_inst/seg_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[24]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[20]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[16]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[12]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[29]' (FDP) to 'segdisplay_inst/seg_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[25]' (FDP) to 'segdisplay_inst/seg_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[21]' (FDP) to 'segdisplay_inst/seg_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[17]' (FDP) to 'segdisplay_inst/seg_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[13]' (FDP) to 'segdisplay_inst/seg_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[30]' (FDP) to 'segdisplay_inst/seg_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[26]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[22]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[18]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[14]' (FDC) to 'adc_inst/cmd_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[31]' (FDP) to 'segdisplay_inst/seg_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[27]' (FDP) to 'segdisplay_inst/seg_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[23]' (FDP) to 'segdisplay_inst/seg_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[19]' (FDP) to 'segdisplay_inst/seg_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dsp_data_reg[15]' (FDP) to 'segdisplay_inst/seg_data_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\adc_inst/cmd_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\segdisplay_inst/seg_data_reg[7] )
+INFO: [Synth 8-3886] merging instance 'adc_inst/op_wr_data_reg[7]' (FDCE) to 'adc_inst/op_wr_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/op_wr_data_reg[5]' (FDCE) to 'adc_inst/op_wr_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/inst_i2c/wr_data_r_reg[7]' (FDCE) to 'adc_inst/inst_i2c/wr_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'adc_inst/inst_i2c/wr_data_r_reg[5]' (FDCE) to 'adc_inst/inst_i2c/wr_data_r_reg[3]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 783.910 ; gain = 451.797
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 783.910 ; gain = 451.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 783.910 ; gain = 451.797
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 811.379 ; gain = 479.266
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 811.379 ; gain = 479.266
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 811.379 ; gain = 479.266
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 811.379 ; gain = 479.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 811.379 ; gain = 479.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 811.379 ; gain = 479.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 811.379 ; gain = 479.266
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    13|
+|3     |LUT1   |    10|
+|4     |LUT2   |    28|
+|5     |LUT3   |    65|
+|6     |LUT4   |    24|
+|7     |LUT5   |    27|
+|8     |LUT6   |    73|
+|9     |FDCE   |    90|
+|10    |FDPE   |    26|
+|11    |FDRE   |    19|
+|12    |IBUF   |     2|
+|13    |IOBUF  |     1|
+|14    |OBUF   |    17|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------+-----------+------+
+|      |Instance          |Module     |Cells |
++------+------------------+-----------+------+
+|1     |top               |           |   396|
+|2     |  adc_inst        |adc        |   222|
+|3     |    inst_i2c      |i2c        |   126|
+|4     |  segdisplay_inst |segdisplay |   126|
++------+------------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 811.379 ; gain = 479.266
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 811.379 ; gain = 182.465
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 811.379 ; gain = 479.266
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 811.379 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+115 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 811.379 ; gain = 492.324
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 811.379 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/Example/XExample/EX18_ADC/EX18_ADC.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 17 15:29:40 2024...

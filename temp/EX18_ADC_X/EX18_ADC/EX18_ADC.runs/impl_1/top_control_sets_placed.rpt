@@ -1,0 +1,84 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Oct 17 15:30:19 2024
+| Host         : User-2024ZRBZCG running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7s6
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    13 |
+| Unused register locations in slices containing registers |    49 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      3 |            1 |
+|      4 |            6 |
+|      7 |            1 |
+|      8 |            1 |
+|      9 |            1 |
+|     15 |            1 |
+|    16+ |            1 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               3 |            2 |
+| No           | No                    | Yes                    |              68 |           18 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              16 |            7 |
+| Yes          | No                    | Yes                    |              48 |           19 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+--------------------------------------+------------------+------------------+----------------+
+|    Clock Signal    |             Enable Signal            | Set/Reset Signal | Slice Load Count | Bel Load Count |
++--------------------+--------------------------------------+------------------+------------------+----------------+
+|  sys_clk_IBUF_BUFG | adc_inst/inst_i2c/scl_i_1_n_0        | rst_IBUF         |                1 |              1 |
+|  sys_clk_IBUF_BUFG |                                      |                  |                2 |              3 |
+|  sys_clk_IBUF_BUFG | adc_inst/inst_i2c/p_11_in            | rst_IBUF         |                1 |              4 |
+|  sys_clk_IBUF_BUFG | adc_inst/adc_ldata_r[3]_i_1_n_0      |                  |                1 |              4 |
+|  sys_clk_IBUF_BUFG | adc_inst/adc_mdata_r[7]_i_1_n_0      |                  |                2 |              4 |
+|  sys_clk_IBUF_BUFG | adc_inst/cstate[5]_i_1__0_n_0        | rst_IBUF         |                2 |              4 |
+|  sys_clk_IBUF_BUFG | adc_inst/cmd_vld_reg_n_0             | rst_IBUF         |                1 |              4 |
+|  sys_clk_IBUF_BUFG | adc_inst/cmd[2]                      | rst_IBUF         |                1 |              4 |
+|  sys_clk_IBUF_BUFG | adc_inst/inst_i2c/cstate[6]_i_1_n_0  | rst_IBUF         |                5 |              7 |
+|  sys_clk_IBUF_BUFG | adc_inst/E[0]                        |                  |                4 |              8 |
+|  sys_clk_IBUF_BUFG | adc_inst/inst_i2c/cnt_bit[8]_i_1_n_0 | rst_IBUF         |                4 |              9 |
+|  sys_clk_IBUF_BUFG | segdisplay_inst/cnt_reg_n_0          | rst_IBUF         |                4 |             15 |
+|  sys_clk_IBUF_BUFG |                                      | rst_IBUF         |               18 |             68 |
++--------------------+--------------------------------------+------------------+------------------+----------------+
+
+

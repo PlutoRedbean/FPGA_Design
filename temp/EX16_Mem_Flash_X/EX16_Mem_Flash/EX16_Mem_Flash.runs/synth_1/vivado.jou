@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Oct 16 19:51:30 2024
+# Process ID: 13184
+# Current directory: E:/Example/XExample/EX16_Mem_Flash/EX16_Mem_Flash.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: E:/Example/XExample/EX16_Mem_Flash/EX16_Mem_Flash.runs/synth_1/top.vds
+# Journal file: E:/Example/XExample/EX16_Mem_Flash/EX16_Mem_Flash.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
